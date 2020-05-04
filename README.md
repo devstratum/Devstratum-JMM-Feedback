@@ -6,6 +6,17 @@ Simple feedback form module for Joomla CMS
 
 https://devstratum.ru/software/devstratum-jmm-feedback-modul-obratnoj-svyazi-dlya-joomla
 
+## Features
+
+* Support AJAX
+* Constructor for fields
+* Validation for fields
+* Phone mask
+* Responsive design
+* Color theme: Light | Dark
+* Localisation: Russian | English
+* Privacy Policy
+
 ## Install
 
 Standart install in Joomla CMS - Upload Package File - **mod_dvstr_feedback.zip**

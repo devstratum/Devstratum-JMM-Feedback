@@ -8,7 +8,7 @@ https://devstratum.ru/software/devstratum-jmm-feedback-modul-obratnoj-svyazi-dly
 
 ## Install
 
-Standart install Joomla CMS - Upload Package File - mod_dvstr_feedback.zip
+Standart install in Joomla CMS - Upload Package File - **mod_dvstr_feedback.zip**
 
 ## Info
 

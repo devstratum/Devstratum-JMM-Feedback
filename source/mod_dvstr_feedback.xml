@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.8.0" type="module" client="site" method="upgrade">
+    <name>Devstratum JMM Feedback</name>
+    <author>Sergey Osipov</author>
+    <creationDate>April 2020</creationDate>
+    <copyright>Copyright © 2020 Sergey Osipov</copyright>
+    <license>MIT License</license>
+    <authorEmail>info@devstratum.ru</authorEmail>
+    <authorUrl>https://devstratum.ru</authorUrl>
+    <version>1.0</version>
+    <description>	
+		<![CDATA[
+            <p><b>Devstratum JMM Feedback</b> - Simple feedback form module - v1.0</p>
+        ]]>
+	</description>
+    <files>
+        <filename module="mod_dvstr_feedback">mod_dvstr_feedback.php</filename>
+        <filename>mod_dvstr_feedback.xml</filename>
+        <filename>helper.php</filename>
+        <folder>assets</folder>
+        <folder>forms</folder>
+        <folder>language</folder>
+        <folder>tmpl</folder>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field type="note" class="alert alert-info" label="MOD_DVSTR_FEEDBACK_NOTE_RECIPIENT"/>
+                <field
+                        name="form_email_from"
+                        type="email"
+                        required="true"
+                        validate="email"
+                        label="MOD_DVSTR_FEEDBACK_EMAILFROM"
+                        description="MOD_DVSTR_FEEDBACK_EMAILFROM_DESC"/>
+                <field
+                        name="form_email_copy"
+                        type="email"
+                        validate="email"
+                        label="MOD_DVSTR_FEEDBACK_EMAILCOPY"
+                        description="MOD_DVSTR_FEEDBACK_EMAILCOPY_DESC"/>
+                <field
+                        name="form_email_admin"
+                        type="radio"
+                        default="0"
+                        label="MOD_DVSTR_FEEDBACK_EMAILADMIN"
+                        description="MOD_DVSTR_FEEDBACK_EMAILADMIN_DESC"
+                        class="btn-group btn-group-yesno">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field type="note" class="alert alert-info" label="MOD_DVSTR_FEEDBACK_NOTE_SETTINGS"/>
+                <field
+                        name="form_theme"
+                        type="list"
+                        label="MOD_DVSTR_FEEDBACK_THEME"
+                        description="MOD_DVSTR_FEEDBACK_THEME_DESC">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                </field>
+                <field
+                        name="form_mask_phone"
+                        type="text"
+                        default="+7 999-999-99-99"
+                        label="MOD_DVSTR_FEEDBACK_MASKPHONE"
+                        description="MOD_DVSTR_FEEDBACK_MASKPHONE_DESC"/>
+                <field
+                        name="form_placeholder_phone"
+                        type="text"
+                        default="+7 ___-___-__-__"
+                        label="MOD_DVSTR_FEEDBACK_PLACEHOLDERPHONE"
+                        description="MOD_DVSTR_FEEDBACK_PLACEHOLDERPHONE_DESC"/>
+                <field
+                        name="form_label"
+                        type="radio"
+                        default="1"
+                        label="MOD_DVSTR_FEEDBACK_LABEL"
+                        description="MOD_DVSTR_FEEDBACK_LABEL_DESC"
+                        class="btn-group btn-group-yesno">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="form_placeholder"
+                        type="radio"
+                        default="1"
+                        label="MOD_DVSTR_FEEDBACK_PLACEHOLDER"
+                        description="MOD_DVSTR_FEEDBACK_PLACEHOLDER_DESC"
+                        class="btn-group btn-group-yesno">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="form_privacy"
+                        type="radio"
+                        default="1"
+                        label="MOD_DVSTR_FEEDBACK_PRIVACY"
+                        description="MOD_DVSTR_FEEDBACK_PRIVACY_DESC"
+                        class="btn-group btn-group-yesno">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field type="note" class="alert alert-info" label="MOD_DVSTR_FEEDBACK_NOTE_PRIVACY"/>
+                <field
+                        name="form_privacy_text"
+                        type="text"
+                        label="MOD_DVSTR_FEEDBACK_PRIVACYTEXT"
+                        description="MOD_DVSTR_FEEDBACK_PRIVACYTEXT_DESC"
+                        default="By send email, you agree to our Terms of Service and Privacy Policy"/>
+                <field
+                        name="form_privacy_url"
+                        type="text"
+                        label="MOD_DVSTR_FEEDBACK_PRIVACYURL"
+                        description="MOD_DVSTR_FEEDBACK_PRIVACYURL_DESC"/>
+            </fieldset>
+            <fieldset name="form">
+                <field
+                        name="form_title"
+                        type="text"
+                        required="true"
+                        label="MOD_DVSTR_FEEDBACK_TITLE"
+                        description="MOD_DVSTR_FEEDBACK_TITLE_DESC"/>
+                <field
+                        name="form_submit"
+                        type="text"
+                        required="true"
+                        label="MOD_DVSTR_FEEDBACK_SUBMIT"
+                        description="MOD_DVSTR_FEEDBACK_SUBMIT_DESC"
+                        default="Submit"/>
+                <field
+                        name="form_success"
+                        type="text"
+                        required="true"
+                        label="MOD_DVSTR_FEEDBACK_SUCCESS"
+                        description="MOD_DVSTR_FEEDBACK_SUCCESS_DESC"
+                        default="Thank! Your message has been sent!"/>
+                <field
+                        name="form_header"
+                        type="editor"
+                        filter="safehtml"
+                        label="MOD_DVSTR_FEEDBACK_HEADER"
+                        description="MOD_DVSTR_FEEDBACK_HEADER_DESC"/>
+                <field
+                        name="form_footer"
+                        type="editor"
+                        filter="safehtml"
+                        label="MOD_DVSTR_FEEDBACK_FOOTER"
+                        description="MOD_DVSTR_FEEDBACK_FOOTER_DESC"/>
+            </fieldset>
+            <fieldset name="fields">
+                <field
+                        name="fields_list"
+                        type="subform"
+                        formsource="/modules/mod_dvstr_feedback/forms/form_fields.xml"
+                        multiple="true"
+                        layout="joomla.form.field.subform.repeatable"
+                        groupByFieldset="true"
+                        min="1"
+                        max="20"
+                        label="MOD_DVSTR_FEEDBACK_FIELDS" description="MOD_DVSTR_FEEDBACK_FIELDS_DESC"/>
+            </fieldset>
+            <fieldset name="mail">
+                <field
+                        name="mail_header"
+                        type="editor"
+                        filter="safehtml"
+                        label="MOD_DVSTR_FEEDBACK_MAIL_HEADER"
+                        description="MOD_DVSTR_FEEDBACK_MAIL_HEADER_DESC"/>
+                <field
+                        name="mail_footer"
+                        type="editor"
+                        filter="safehtml"
+                        label="MOD_DVSTR_FEEDBACK_MAIL_FOOTER"
+                        description="MOD_DVSTR_FEEDBACK_MAIL_FOOTER_DESC"/>
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field
+                        name="layout"
+                        type="modulelayout"
+                        label="JFIELD_ALT_LAYOUT_LABEL"
+                        description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

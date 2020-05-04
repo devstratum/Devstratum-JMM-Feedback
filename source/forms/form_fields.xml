@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="fields_section" label="MOD_DVSTR_FEEDBACK_FIELD" class="well well-small">
+        <field
+                name="field_name"
+                type="text"
+                required="true"
+                label="MOD_DVSTR_FEEDBACK_NAME"
+                description="MOD_DVSTR_FEEDBACK_NAME_DESC"/>
+        <field
+                name="field_type"
+                type="list"
+                label="MOD_DVSTR_FEEDBACK_TYPE"
+                description="MOD_DVSTR_FEEDBACK_TYPE_DESC">
+            <option value="text">MOD_DVSTR_FEEDBACK_TYPE_TEXT</option>
+            <option value="phone">MOD_DVSTR_FEEDBACK_TYPE_PHONE</option>
+            <option value="email">MOD_DVSTR_FEEDBACK_TYPE_EMAIL</option>
+            <option value="textarea">MOD_DVSTR_FEEDBACK_TYPE_TEXTAREA</option>
+        </field>
+        <field
+                name="field_required"
+                type="radio"
+                default="1"
+                label="MOD_DVSTR_FEEDBACK_REQUIRED"
+                description="MOD_DVSTR_FEEDBACK_REQUIRED_DESC"
+                class="btn-group btn-group-yesno">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+    </fieldset>
+</form>

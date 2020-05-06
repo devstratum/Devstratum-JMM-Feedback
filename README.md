@@ -2,6 +2,8 @@
 
 Simple feedback form module for CMS Joomla
 
+![product preview](https://github.com/devstratum/Devstratum-JMM-Feedback/blob/master/devstratum-jmm-feedback.jpg)
+
 **Article**
 
 https://devstratum.ru/software/devstratum-jmm-feedback-modul-obratnoj-svyazi-dlya-cms-joomla

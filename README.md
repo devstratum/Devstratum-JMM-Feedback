@@ -1,6 +1,6 @@
 # Devstratum JMM Feedback
 
-Simple feedback form module for Joomla CMS
+Simple feedback form module for CMS Joomla
 
 **Article**
 
@@ -19,7 +19,7 @@ https://devstratum.ru/software/devstratum-jmm-feedback-modul-obratnoj-svyazi-dly
 
 ## Install
 
-Standart install in Joomla CMS - Upload Package File - **mod_dvstr_feedback.zip**
+Standart install in CMS Joomla - Upload Package File - **mod_dvstr_feedback.zip**
 
 ## Info
 

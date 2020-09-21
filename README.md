@@ -33,6 +33,6 @@ Author: Sergey Osipov
 
 Website: https://devstratum.ru
 
-Email: info@devstartum.ru
+Email: info@devstratum.ru
 
 Repo: https://github.com/devstratum/Devstratum-JMM-Feedback

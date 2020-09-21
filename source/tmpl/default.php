@@ -23,6 +23,8 @@ defined('_JEXEC') or die ('Restricted access');
 
 $fields_list = $params->get('fields_list');
 
+$phone_mask = false;
+
 ?>
 
 <div class="dvstr-feedback dvstr-feedback-<?php echo $params->get('form_theme'); ?>" id="dvstr_feedback_<?php echo $module->id; ?>" data-form-id="<?php echo $module->id; ?>">
@@ -69,6 +71,7 @@ $fields_list = $params->get('fields_list');
                                     break;
                                 case 'phone':
                                     echo '<input type="text" name="' . $key . '" class="dvstr-field dvstr-input-phone' . $required . '" ' . $placeholder . ' />';
+                                    $phone_mask = true;
                                     break;
                                 case 'email':
                                     echo '<input type="text" name="' . $key . '" class="dvstr-field dvstr-input-email' . $required . '" ' . $placeholder . ' />';
@@ -131,12 +134,14 @@ $fields_list = $params->get('fields_list');
             <?php endif; ?>
             <input type="hidden" name="dvstr_feedback" value="<?php echo $module->id; ?>">
         </form>
-        <script>
-            // Mask Phone
-            jQuery(document).ready(function($) {
-                var feedback = $('#dvstr_feedback_<?php echo $module->id; ?>');
-                feedback.find('.dvstr-input-phone').mask('<?php echo $params->get('form_mask_phone'); ?>', {placeholder: '<?php echo $params->get('form_placeholder_phone'); ?>'});
-            });
-        </script>
+        <?php if ($phone_mask): ?>
+            <script>
+                // Mask Phone
+                jQuery(document).ready(function($) {
+                    var feedback = $('#dvstr_feedback_<?php echo $module->id; ?>');
+                    feedback.find('.dvstr-input-phone').mask('<?php echo $params->get('form_mask_phone'); ?>', {placeholder: '<?php echo $params->get('form_placeholder_phone'); ?>'});
+                });
+            </script>
+        <?php endif; ?>
     </div>
 </div>

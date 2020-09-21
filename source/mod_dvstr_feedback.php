@@ -8,7 +8,7 @@ License: MIT License
 Author: Sergey Osipov
 Copyright: © 2020 Sergey Osipov
 Website: https://devstratum.ru
-Email: info@devstartum.ru
+Email: info@devstratum.ru
 Repo: https://github.com/devstratum/Devstratum-JMM-Feedback
 
      _                _             _

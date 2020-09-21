@@ -25,7 +25,7 @@ Standart install in CMS Joomla - Upload Package File - **mod_dvstr_feedback.zip*
 
 ## Info
 
-Version: 1.0
+Version: 1.1
 
 License: MIT License
 

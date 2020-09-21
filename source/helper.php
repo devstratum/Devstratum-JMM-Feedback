@@ -1,9 +1,9 @@
 <?php
 /*######################################################
 Devstratum JMM Feedback
-Simple feedback form module
+Simple feedback form module for CMS Joomla
 
-Version: 1.0
+Version: 1.1
 License: MIT License
 Author: Sergey Osipov
 Copyright: (c) 2020 Sergey Osipov
@@ -17,7 +17,7 @@ Repo: https://github.com/devstratum/Devstratum-JMM-Feedback
 | (_| |  __/\ V /\__ \ |_| | | (_| | |_| |_| | | | | | |
  \__,_|\___| \_/ |___/\__|_|  \__,_|\__|\__,_|_| |_| |_|
 
-########################################################*/
+#######################################################*/
 
 defined('_JEXEC') or die ('Restricted access');
 

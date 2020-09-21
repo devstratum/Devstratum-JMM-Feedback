@@ -7,10 +7,10 @@
     <license>MIT License</license>
     <authorEmail>info@devstratum.ru</authorEmail>
     <authorUrl>https://devstratum.ru</authorUrl>
-    <version>1.0</version>
+    <version>1.1</version>
     <description>	
 		<![CDATA[
-            <p><b>Devstratum JMM Feedback</b> - Simple feedback form module - v1.0</p>
+            <p><b>Devstratum JMM Feedback</b> - Simple feedback form module</p>
         ]]>
 	</description>
     <files>
